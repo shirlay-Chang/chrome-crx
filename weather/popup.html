@@ -1,0 +1,105 @@
+<!doctype html>
+	<html>
+	  <head>
+	    <title>Getting Started Extension's Popup</title>
+	    <style>
+	      html,body {
+	        min-width: 320px;
+	        overflow-x: hidden;
+	        background-image:url("bg.jpeg");
+	        min-height: 400px;
+	        color:#ffffff;
+	      }
+	      .city{
+	      	font-size: 22px;
+	      	text-align: center;
+	      	margin: 20px auto 0 auto;
+	      }
+	      .update-time{
+	      	position: absolute;
+	      	bottom:0;
+	      	left:0;
+	      	right:0;
+	      	margin: 10px auto;
+	      	font-size: 12px;
+	      	text-align: center;
+	      }
+	      .temperature{
+	      	font-size: 32px;
+	      	text-align: center;
+	      }
+	      .side-content{
+	      	font-size: 12px;
+	      	display: flex;
+	      	justify-content: space-around;
+	      }
+	      .all-day{
+	      	position: absolute;
+	      	bottom:40px;
+	      	left:0;
+	      	right:0;
+			display: flex;
+	      	justify-content: space-around;
+	      	background: rgba(255,255,255,0.3);
+	      }
+	      .all-day>div{
+	      	font-size: 14px;
+	      	padding: 20px 0;
+	      	flex-grow:1;
+	      	text-align: center;
+	      	border:1px solid rgba(255,255,255,0.7);
+	      }
+		  .no-content{
+			  display: none;
+		  }
+		  .no-content img{
+			  display: block;
+			  margin: 100px auto 20px auto;
+		  }
+		  .no-content p{
+			  font-size: 14px;
+			  text-align: center;
+		  }
+	    </style>
+	  </head>
+	  <body>
+	  <div class="main-content">
+		  <p class="city" id="city">**</p>
+		  <p class="temperature" id="temperature">**~**℃</p>
+		  <div class="side-content">
+			  <p id="day">白天：*</p>
+			  <p id="night">夜间：*</p>
+			  <p id="water">降水概率：*</p>
+		  </div>
+		  <div class="side-content">
+			  <p id="humidity">相对湿度：**%</p>
+			  <p id="wind">风力等级：*~*</p>
+			  <p id="see">能见度：**km</p>
+		  </div>
+		  <div class="all-day">
+			  <div>
+				  <p id="day1">****-**-**</p>
+				  <p id="temp1">**℃</p>
+			  </div>
+			  <div>
+				  <p id="day2">****-**-**</p>
+				  <p id="temp2">**℃</p>
+			  </div>
+			  <div>
+				  <p id="day3">****-**-**</p>
+				  <p id="temp3">**℃</p>
+			  </div>
+		  </div>
+		  <p class="update-time" id="update-time">更新时间：****-**-** **:**</p>
+	  </div>
+	  <div class="no-content">
+		  <img src="null.png"/>
+		  <p>数据获取失败,请检查您的网络是否连接</p>
+	  </div>
+
+
+	  
+	  </body>
+	  <script src="jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="popup.js" type="text/javascript" charset="utf-8"></script>
+	</html>
